@@ -1,4 +1,5 @@
 {
+  "version": "0.0.1-beta.1",
   "dependencies": {
     "@enum-plus/plugin-i18next": "^1.0.0",
     "@enum-plus/plugin-i18next-vue": "^1.0.0",
