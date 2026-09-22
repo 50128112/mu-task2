@@ -2,6 +2,9 @@ name: Daily install
 
 on:
   schedule:
+    # UTC time
+    - cron: "0 4 * * *"
+    - cron: "0 12 * * *"
     - cron: "0 20 * * *"
   workflow_dispatch: {}
 
@@ -11,6 +14,13 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          registry-url: "https://registry.npmjs.org"
+
       - name: Run install loop from run.sh
         shell: bash
         run: |
@@ -18,7 +28,7 @@ jobs:
           
           npm install -g pnpm@11.25.0
 
-          for i in $(seq 1 200); do
+          for i in $(seq 1 100); do
             echo "========== Iteration ${i} =========="
             
             # 1. 删除 node_modules 目录
