@@ -1,0 +1,17 @@
+.github/workflows/daily.yml
+  h_99cad05bea77d1 16,18-19,29-32,35,56,58-62
+  h_99cad05bea77d1 17
+.github/actions/install-sing-box/action.yml
+  h_99cad05bea77d1 1-172
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3eb2cec3218a98bced2fe52d8c31b152ee009508",
+  "prompts": {},
+  "humans": {
+    "h_99cad05bea77d1": {
+      "author": "Fengbao Li <shijistar@gmail.com>"
+    }
+  }
+}
