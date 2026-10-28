@@ -44,6 +44,7 @@ jobs:
           pnpm config list | grep -i proxy
 
           for i in $(seq 1 100); do
+            echo
             echo "========== Iteration ${i} =========="
             
             # 1. 删除 node_modules 目录
@@ -52,7 +53,8 @@ jobs:
             # 2. 清理 npm 缓存
             pnpm cache delete > /dev/null 2>&1
             pnpm store prune > /dev/null 2>&1
-            
+
+            date "+%Y-%m-%d %H:%M:%S"
             # 3. 安装依赖
             pnpm install --registry https://registry.npmjs.org/ --no-lockfile | grep 'downloaded '
             
